@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate:AnyObject{
+    func didlogin(_ sender:LoginViewController)
+}
+
+protocol LogoutDelegate:AnyObject{
+    func didlogout()
+}
+
 class LoginViewController: UIViewController {
+    
+    //subscriber will have a strong ref
+    weak var delegate:LoginViewControllerDelegate?
 
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
@@ -25,8 +36,14 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
-            
+        
 
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        signInButton.configuration?.showsActivityIndicator = false
+        loginView.usernameTextField.text = ""
+        loginView.passwordTextField.text = ""
     }
 
  
@@ -70,12 +87,7 @@ extension LoginViewController{
             errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
             errorMessageLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: errorMessageLabel.trailingAnchor, multiplier: 1),
-            
-
-
-            
-            
-            
+                        
         ])
     }
 }
@@ -101,6 +113,7 @@ extension LoginViewController{
         
         if username == "Kevin" && password == "welcome"{
             signInButton.configuration?.showsActivityIndicator  = true
+            delegate?.didlogin(self)
             return
         }
         else{
