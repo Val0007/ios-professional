@@ -32,8 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabVc
         
         //window?.rootViewController = OnboardingContainerViewController()
-        
-
+            
+        tabVc.setStatusBar()
+        UINavigationBar.appearance().backgroundColor = appColor
 
         
         
