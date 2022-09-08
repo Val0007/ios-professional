@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B32FD93328C9C6E900C75952 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32FD93228C9C6E900C75952 /* AccountSummaryCell.swift */; };
 		B33659C228AABECD00AC6C03 /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33659C128AABECD00AC6C03 /* OnBoardingContainerViewController.swift */; };
 		B34C35BB28ACA65D004E8BE3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C35BA28ACA65D004E8BE3 /* OnboardingViewController.swift */; };
+		B3C2CCF528C76F1E00FD040C /* UiViewcontrollerutils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CCF428C76F1E00FD040C /* UiViewcontrollerutils.swift */; };
+		B3C2CCF728C7703300FD040C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CCF628C7703300FD040C /* MainViewController.swift */; };
+		B3C2CCFA28C79B5A00FD040C /* AccoutSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CCF928C79B5A00FD040C /* AccoutSummaryVC.swift */; };
+		B3C2CCFC28C79CAF00FD040C /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CCFB28C79CAE00FD040C /* AccountSummaryHeaderView.swift */; };
+		B3C2CCFE28C79CCB00FD040C /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C2CCFD28C79CCB00FD040C /* AccountSummaryHeaderView.xib */; };
 		B3CFADEB28A6BD6D000E87BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFADEA28A6BD6D000E87BD /* AppDelegate.swift */; };
 		B3CFADEF28A6BD6D000E87BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFADEE28A6BD6D000E87BD /* LoginViewController.swift */; };
 		B3CFADF428A6BD6E000E87BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CFADF328A6BD6E000E87BD /* Assets.xcassets */; };
@@ -19,8 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B32FD93228C9C6E900C75952 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		B33659C128AABECD00AC6C03 /* OnBoardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContainerViewController.swift; sourceTree = "<group>"; };
 		B34C35BA28ACA65D004E8BE3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		B3C2CCF428C76F1E00FD040C /* UiViewcontrollerutils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewcontrollerutils.swift; sourceTree = "<group>"; };
+		B3C2CCF628C7703300FD040C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B3C2CCF928C79B5A00FD040C /* AccoutSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccoutSummaryVC.swift; sourceTree = "<group>"; };
+		B3C2CCFB28C79CAE00FD040C /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
+		B3C2CCFD28C79CCB00FD040C /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		B3CFADE728A6BD6D000E87BD /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CFADEA28A6BD6D000E87BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CFADEE28A6BD6D000E87BD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +55,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B32FD93028C9C6B800C75952 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CCFD28C79CCB00FD040C /* AccountSummaryHeaderView.xib */,
+				B3C2CCFB28C79CAE00FD040C /* AccountSummaryHeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		B32FD93128C9C6C500C75952 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				B32FD93228C9C6E900C75952 /* AccountSummaryCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		B33659C028AABEA700AC6C03 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -53,10 +82,21 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		B3C2CCF828C79A8A00FD040C /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				B32FD93128C9C6C500C75952 /* cells */,
+				B32FD93028C9C6B800C75952 /* Header */,
+				B3C2CCF928C79B5A00FD040C /* AccoutSummaryVC.swift */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
 		B3CFADDE28A6BD6D000E87BD = {
 			isa = PBXGroup;
 			children = (
 				B3CFADE928A6BD6D000E87BD /* Bankey */,
+				B3D040B028C7167D00CD1B2A /* Utlis */,
 				B3CFADE828A6BD6D000E87BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,11 +112,12 @@
 		B3CFADE928A6BD6D000E87BD /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
-				B3D040B028C7167D00CD1B2A /* Utlis */,
-				B33659C028AABEA700AC6C03 /* Onboarding */,
 				B3CFAE0028A6C0DE000E87BD /* Login */,
+				B3C2CCF828C79A8A00FD040C /* AccountSummary */,
+				B33659C028AABEA700AC6C03 /* Onboarding */,
 				B3CFADFF28A6C0A7000E87BD /* files */,
 				B3CFADEA28A6BD6D000E87BD /* AppDelegate.swift */,
+				B3C2CCF628C7703300FD040C /* MainViewController.swift */,
 			);
 			path = Bankey;
 			sourceTree = "<group>";
@@ -104,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B3D040B128C7169200CD1B2A /* LocalState.swift */,
+				B3C2CCF428C76F1E00FD040C /* UiViewcontrollerutils.swift */,
 			);
 			path = Utlis;
 			sourceTree = "<group>";
@@ -166,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C2CCFE28C79CCB00FD040C /* AccountSummaryHeaderView.xib in Resources */,
 				B3CFADF728A6BD6E000E87BD /* LaunchScreen.storyboard in Resources */,
 				B3CFADF428A6BD6E000E87BD /* Assets.xcassets in Resources */,
 			);
@@ -181,8 +224,13 @@
 				B3CFAE0228A6C103000E87BD /* LoginView.swift in Sources */,
 				B3D040B228C7169200CD1B2A /* LocalState.swift in Sources */,
 				B3D040AF28C710BE00CD1B2A /* DummyViewController.swift in Sources */,
+				B3C2CCFC28C79CAF00FD040C /* AccountSummaryHeaderView.swift in Sources */,
 				B3CFADEF28A6BD6D000E87BD /* LoginViewController.swift in Sources */,
+				B3C2CCF528C76F1E00FD040C /* UiViewcontrollerutils.swift in Sources */,
+				B32FD93328C9C6E900C75952 /* AccountSummaryCell.swift in Sources */,
 				B34C35BB28ACA65D004E8BE3 /* OnboardingViewController.swift in Sources */,
+				B3C2CCFA28C79B5A00FD040C /* AccoutSummaryVC.swift in Sources */,
+				B3C2CCF728C7703300FD040C /* MainViewController.swift in Sources */,
 				B3CFADEB28A6BD6D000E87BD /* AppDelegate.swift in Sources */,
 				B33659C228AABECD00AC6C03 /* OnBoardingContainerViewController.swift in Sources */,
 			);
@@ -332,6 +380,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -359,6 +408,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

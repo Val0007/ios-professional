@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let onBoardingVc = OnboardingContainerViewController()
     let dummyVc = DummyViewController()
     let localState = LocalState()
+    let tabVc = MainViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -28,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = loginViewController
+        window?.rootViewController = tabVc
         
         //window?.rootViewController = OnboardingContainerViewController()
         
@@ -50,7 +51,7 @@ extension AppDelegate:LoginViewControllerDelegate{
     func didlogin(_ sender: LoginViewController) {
         print("YES")
         if LocalState.hasOnboarded{
-            setRootViewController(dummyVc)
+            setRootViewController(tabVc)
         }
         else{
             setRootViewController(onBoardingVc)
@@ -62,7 +63,7 @@ extension AppDelegate:OnboardingContainerViewControllerDelegate{
     func didfinishOnboarding(_ sender: OnboardingContainerViewController) {
         print("Finished Onboarding")
         LocalState.hasOnboarded = true
-        setRootViewController(dummyVc)
+        setRootViewController(tabVc)
     }
 }
 
