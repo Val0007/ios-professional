@@ -35,6 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         displayLogin()
         
+        registerForNotifications()
+
+
+        
 
         return true
 
@@ -102,10 +106,22 @@ extension AppDelegate{
                           animations: nil,
                           completion: nil)
     }
+    
+    private func registerForNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogout), name: .logout, object: nil)
+    }
+
+    @objc func didLogout() {
+        displayLogin()
+    }
 }
 
 class VCC:UIViewController{
     override func viewDidLoad() {
         view.backgroundColor = .yellow
     }
+}
+
+extension Notification.Name {
+     static let logout = Notification.Name("Logout")
 }
